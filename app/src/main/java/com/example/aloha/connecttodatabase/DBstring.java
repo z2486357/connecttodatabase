@@ -21,6 +21,7 @@ public class DBstring {
         try{
             HttpClient HC=new DefaultHttpClient();
             HttpPost HP=new HttpPost("http://z2486357.byethost31.com/");
+            HP.addHeader("Cookie","__test=2140c2ab41bbc09641b3fdcb2bc52843;expires=Thu,31-Dec-37 23:55:55 GMT;path=/");
             ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("S1",i));
             HP.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
