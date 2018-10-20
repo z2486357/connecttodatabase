@@ -11,9 +11,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.w3c.dom.Entity;
-
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import org.w3c.dom.Entity;
 
 public class DBstring {
     public static String DB1(String i){
@@ -21,7 +23,7 @@ public class DBstring {
         try{
             HttpClient HC=new DefaultHttpClient();
             HttpPost HP=new HttpPost("http://z2486357.byethost31.com/");
-            HP.addHeader("Cookie","__test=2140c2ab41bbc09641b3fdcb2bc52843;expires=Thu,31-Dec-37 23:55:55 GMT;path=/");
+            HP.addHeader("Cookie", "__test=ae8eb973874586be778dfa1ace725c7a; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/");
             ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("S1",i));
             HP.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
@@ -31,7 +33,7 @@ public class DBstring {
 
 
         }catch (Exception e){
-            Log.i("Error Message",e.toString());
+            Log.i("錯誤訊息",e.toString());
         }
         return result;
     }
